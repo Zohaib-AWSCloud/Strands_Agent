@@ -1,0 +1,26 @@
+transaction_id,timestamp,customer_id,amount,currency,merchant,category,location_city,location_country,card_type,is_online
+TXN-001,2026-05-28 08:15:23,CUST-4421,12.50,AUD,Morning Brew Cafe,Food & Drink,Sydney,AU,debit,false
+TXN-002,2026-05-28 08:17:45,CUST-4421,3200.00,AUD,TechWorld Electronics,Electronics,Lagos,NG,debit,true
+TXN-003,2026-05-28 08:18:12,CUST-4421,2800.00,AUD,GiftCards Express,Gift Cards,Lagos,NG,debit,true
+TXN-004,2026-05-28 08:19:01,CUST-4421,1500.00,AUD,Crypto Exchange XYZ,Financial Services,Moscow,RU,debit,true
+TXN-005,2026-05-28 12:30:00,CUST-4421,15.80,AUD,Lunch Spot,Food & Drink,Sydney,AU,debit,false
+TXN-006,2026-05-28 09:00:00,CUST-7832,250.00,AUD,Woolworths,Groceries,Melbourne,AU,credit,false
+TXN-007,2026-05-28 09:45:00,CUST-7832,89.99,AUD,Netflix,Entertainment,Melbourne,AU,credit,true
+TXN-008,2026-05-28 14:20:00,CUST-7832,45.00,AUD,Uber,Transport,Melbourne,AU,credit,true
+TXN-009,2026-05-28 22:01:00,CUST-9156,9999.99,AUD,Luxury Watches Online,Jewelry,Sydney,AU,credit,true
+TXN-010,2026-05-28 22:02:30,CUST-9156,9999.99,AUD,Designer Bags Direct,Fashion,Sydney,AU,credit,true
+TXN-011,2026-05-28 22:03:15,CUST-9156,9999.99,AUD,Gold Bullion Express,Investment,Sydney,AU,credit,true
+TXN-012,2026-05-28 22:04:00,CUST-9156,9999.99,AUD,Electronics Mega Store,Electronics,Sydney,AU,credit,true
+TXN-013,2026-05-29 07:30:00,CUST-2201,55.00,AUD,BP Fuel,Fuel,Brisbane,AU,debit,false
+TXN-014,2026-05-29 08:00:00,CUST-2201,4.50,AUD,Toll Road,Transport,Brisbane,AU,debit,false
+TXN-015,2026-05-29 12:15:00,CUST-2201,22.00,AUD,Subway,Food & Drink,Brisbane,AU,debit,false
+TXN-016,2026-05-29 03:00:00,CUST-5543,150.00,USD,Online Casino,Gambling,Curacao,CW,credit,true
+TXN-017,2026-05-29 03:05:00,CUST-5543,150.00,USD,Online Casino,Gambling,Curacao,CW,credit,true
+TXN-018,2026-05-29 03:10:00,CUST-5543,300.00,USD,Online Casino,Gambling,Curacao,CW,credit,true
+TXN-019,2026-05-29 03:15:00,CUST-5543,500.00,USD,Online Casino,Gambling,Curacao,CW,credit,true
+TXN-020,2026-05-29 03:20:00,CUST-5543,1000.00,USD,Online Casino,Gambling,Curacao,CW,credit,true
+TXN-021,2026-05-29 10:00:00,CUST-3310,1200.00,AUD,JB Hi-Fi,Electronics,Perth,AU,credit,false
+TXN-022,2026-05-29 11:30:00,CUST-3310,85.00,AUD,Coles,Groceries,Perth,AU,credit,false
+TXN-023,2026-05-29 16:00:00,CUST-3310,200.00,AUD,Fitness First,Health,Perth,AU,credit,false
+TXN-024,2026-05-30 09:00:00,CUST-4421,8.50,AUD,Morning Brew Cafe,Food & Drink,Sydney,AU,debit,false
+TXN-025,2026-05-30 12:00:00,CUST-4421,18.90,AUD,Sushi Train,Food & Drink,Sydney,AU,debit,false
