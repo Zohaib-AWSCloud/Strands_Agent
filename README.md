@@ -1,6 +1,6 @@
 # 🏦 FSI AgentCore Workshop: AI Agents for Financial Services
 
-> A hands-on workshop demonstrating Amazon Bedrock AgentCore + Strands Agents SDK for Financial Services use cases. Built for TAMs supporting FSI customers (Afterpay, Block, Vanguard).
+> A hands-on workshop demonstrating Amazon Bedrock AgentCore + Strands Agents SDK. The content in this workshop is aligned with Financial Services Customer for demo purposes.
 
 ## 🎯 What You'll Build
 
