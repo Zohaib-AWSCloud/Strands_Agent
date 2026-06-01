@@ -1,0 +1,66 @@
+default_agent: fsi_transaction_validator
+agents:
+  fsi_transaction_validator:
+    name: fsi_transaction_validator
+    language: python
+    node_version: null
+    entrypoint: /Users/zohaibso/AI Workshops/FSI-AgentCore-Workshop/04-agentcore-runtime-mcp-fsi/mcp_server.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: null
+    aws:
+      execution_role: arn:aws:iam::905035168378:role/AmazonBedrockAgentCoreSDKRuntime-ap-southeast-2-99ebe9746e
+      execution_role_auto_create: false
+      account: '905035168378'
+      region: ap-southeast-2
+      ecr_repository: 905035168378.dkr.ecr.ap-southeast-2.amazonaws.com/bedrock-agentcore-fsi_transaction_validator
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: MCP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: fsi_transaction_validator-QJFUt9HetD
+      agent_arn: arn:aws:bedrock-agentcore:ap-southeast-2:905035168378:runtime/fsi_transaction_validator-QJFUt9HetD
+      agent_session_id: null
+    codebuild:
+      project_name: bedrock-agentcore-fsi_transaction_validator-builder
+      execution_role: arn:aws:iam::905035168378:role/AmazonBedrockAgentCoreSDKCodeBuild-ap-southeast-2-99ebe9746e
+      source_bucket: bedrock-agentcore-codebuild-sources-905035168378-ap-southeast-2
+    memory:
+      mode: NO_MEMORY
+      memory_id: null
+      memory_arn: null
+      memory_name: null
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration:
+      customJWTAuthorizer:
+        allowedClients:
+        - 4jllbe0ehrnfqd18n4lvc25ig0
+        discoveryUrl: https://cognito-idp.ap-southeast-2.amazonaws.com/ap-southeast-2_pxOiMFufX/.well-known/openid-configuration
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
