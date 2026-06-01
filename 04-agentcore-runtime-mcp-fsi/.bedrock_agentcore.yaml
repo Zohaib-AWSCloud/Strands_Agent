@@ -1,0 +1,8 @@
+runtime:
+  name: fsi-transaction-validator
+  port: 8000
+  protocol: MCP
+  authentication:
+    type: COGNITO
+    userPoolId: ap-southeast-2_Hc5rScg1C
+    clientId: 2hs2f0mtobs62918jomivcf0rg
