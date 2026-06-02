@@ -1,72 +1,39 @@
-# 🏦 FSI AgentCore Workshop: AI Agents for Financial Services
+# Bedrock AgentCore with Strands Agents SDK and Nova Pro — FSI Edition
 
-> A hands-on workshop demonstrating Amazon Bedrock AgentCore + Strands Agents SDK. The content in this workshop is aligned with Financial Services Customer for demo purposes.
+This workshop provides hands-on experience with Amazon Bedrock AgentCore, demonstrating how to build sophisticated AI agents using various tools and runtime environments — all framed around Financial Services Industry (FSI) use cases. You'll learn to integrate code interpreters, browser automation, memory capabilities, and deploy scalable agent solutions.
 
-## 🎯 What You'll Build
+## Workshop Overview
 
-An AI agent that can:
-- Calculate loan repayments and compare mortgage scenarios
-- Detect fraud patterns in transaction data
-- Monitor regulatory websites (APRA, ASX) for updates
-- Run portfolio risk analysis (VaR, sector exposure)
-- Remember client preferences across sessions
-- Provide full audit trails for compliance
+The workshop consists of 6 progressive labs that build upon each other:
 
-## 🏗️ Architecture
+| Lab | Title | Description | Key Learning Points | Directory |
+|-----|-------|-------------|--------------------:|-----------|
+| **Lab 0** | Getting Started with Strands Agents | Introduction to Strands Agents with FSI tools (loan calculator, stock lookup, FX rates) | • Learn Strands Agents fundamentals<br>• Create your first AI agent<br>• Build custom financial tools<br>• Understand the agent loop and conversation memory | [00-strands-agents-fsi/](./00-strands-agents-fsi/) |
+| **Lab 1** | Code Interpreter Integration | Integrate Strands Agents with AgentCore Code Interpreter for dynamic financial analysis | • Fraud detection on transaction data<br>• Portfolio risk analysis (sector concentration, P&L)<br>• Custom Code Interpreter with network access<br>• Live market data via yfinance | [01-agentcore-code-interpreter-fsi/](./01-agentcore-code-interpreter-fsi/) |
+| **Lab 2** | Browser Automation | Use AgentCore Browser to navigate financial websites and extract regulatory data | • Create custom browser with public network<br>• Navigate RBA website with Playwright<br>• Extract monetary policy information<br>• Browser fetch + Agent summarize pattern | [02-agentcore-browser-fsi/](./02-agentcore-browser-fsi/) |
+| **Lab 4** | MCP Server Deployment | Deploy transaction validation tools as a managed MCP server with authentication | • Build FSI MCP server (validate, sanctions, risk profile)<br>• Set up Cognito authentication<br>• Deploy to AgentCore Runtime<br>• Connect Strands Agent to deployed server | [04-agentcore-runtime-mcp-fsi/](./04-agentcore-runtime-mcp-fsi/) |
+| **Lab 5** | Agent Runtime with Observability | Deploy Strands Agents to AgentCore Runtime with comprehensive tracing for compliance | • Deploy agent with tools to AgentCore Runtime<br>• Invoke via boto3 with IAM auth<br>• View traces in CloudWatch (audit trail)<br>• GenAI Observability for FSI compliance | [05-agentcore-runtime-observability-fsi/](./05-agentcore-runtime-observability-fsi/) |
+| **Lab 6** | Memory Integration | Integrate persistent memory for client context across sessions | • Three memory strategies (summary, preference, semantic)<br>• Store rich FSI client conversations<br>• Memory-enabled agent for personalized responses<br>• Session handover demo | [06-agentcore-memory-fsi/](./06-agentcore-memory-fsi/) |
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    Strands Agent (Brain)                  │
-│  - Reasons about user requests                          │
-│  - Decides which tools to call                          │
-│  - Maintains conversation context                       │
-└──────────┬──────────┬──────────┬──────────┬─────────────┘
-           │          │          │          │
-    ┌──────▼──┐ ┌─────▼────┐ ┌──▼───┐ ┌───▼────┐
-    │  Code   │ │ Browser  │ │ MCP  │ │ Memory │
-    │Interpret│ │  Auto    │ │Server│ │        │
-    │  (01)   │ │  (02)    │ │ (04) │ │  (06)  │
-    └─────────┘ └──────────┘ └──────┘ └────────┘
-    Run Python   Navigate     Deployed   Persistent
-    in sandbox   websites     tools      client context
-```
+## Prerequisites
 
-## 📋 Workshop Labs
+Before starting the workshop, ensure you have:
 
-| Lab | Feature | FSI Use Case | Duration |
-|-----|---------|--------------|----------|
-| [00](00-strands-agents-fsi/) | **Strands Basics** | Loan calculator, stock lookup, FX rates | 20 min |
-| [01](01-agentcore-code-interpreter-fsi/) | **Code Interpreter** | Fraud detection, portfolio VaR analysis | 30 min |
-| [02](02-agentcore-browser-fsi/) | **Browser Automation** | APRA regulatory monitoring, bank rate comparison | 25 min |
-| [04](04-agentcore-runtime-mcp-fsi/) | **Runtime MCP** | Deploy transaction validation as managed service | 30 min |
-| [05](05-agentcore-runtime-observability-fsi/) | **Observability** | Audit trail for compliance (traces, logs) | 25 min |
-| [06](06-agentcore-memory-fsi/) | **Memory** | Client context: risk appetite, migration plans | 25 min |
+- **AWS Account** with appropriate permissions for Bedrock AgentCore and related services
+  - `BedrockAgentCoreFullAccess` managed policy
+  - `AmazonBedrockFullAccess` managed policy
+  - `CloudWatchFullAccessV2` managed policy
+  - `Caller permissions`: See detailed policy [here](https://github.com/aws/bedrock-agentcore-starter-toolkit/blob/main/documentation/docs/user-guide/runtime/permissions.md#developercaller-permissions)
+- [Enable CloudWatch Transaction Search](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability-configure.html#observability-configure-builtin) for AgentCore Observability
+- **AWS Credentials** configured (IAM role or environment variables)
+- **Python Environment** with required packages (listed in `pyproject.toml` and instructions in each notebook)
 
-## 🏦 FSI Customer Scenarios
+### AWS Regions
 
-### Afterpay / BNPL
-- Real-time transaction fraud scoring
-- Velocity checks and geo-anomaly detection
-- Regulatory compliance monitoring (ASIC)
+We suggest using `ap-southeast-2` (Sydney) for this workshop to align with FSI customers in Australia. Bedrock AgentCore is available in specific AWS regions — ensure you're working in a supported region.
 
-### Block (Square / CashApp)
-- Multi-currency FX operations
-- Cost optimization analysis
-- Platform reliability monitoring
+### Environment Setup
 
-### Vanguard / Asset Management
-- Portfolio risk calculations (VaR, Sharpe ratio)
-- Regulatory reporting (CPS 230, CPS 234)
-- Client advisory with persistent memory
-
-## 🚀 Quick Start
-
-### Prerequisites
-- AWS Account with [Nova Pro model access](https://console.aws.amazon.com/bedrock/home#/modelaccess)
-- Python 3.10+
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) package manager
-
-### Setup
 ```bash
 git clone https://github.com/Zohaib-AWSCloud/Strands_Agent.git
 cd Strands_Agent
@@ -74,63 +41,53 @@ uv sync
 uv run jupyter lab
 ```
 
-Then open Lab 00 and run cells with Shift+Enter.
+If not using an IAM role, configure your AWS credentials:
 
-### AWS Region Configuration
-The workshop auto-detects your region for the correct Nova Pro model ID:
-- `us-*` → `us.amazon.nova-pro-v1:0`
-- `eu-*` → `eu.amazon.nova-pro-v1:0`
-- `ap-*` → `apac.amazon.nova-pro-v1:0`
+```python
+import os
 
-## 📁 Repository Structure
+os.environ["AWS_ACCESS_KEY_ID"] = "<YOUR_ACCESS_KEY>"
+os.environ["AWS_SECRET_ACCESS_KEY"] = "<YOUR_SECRET_KEY>"
+os.environ["AWS_SESSION_TOKEN"] = "<OPTIONAL_SESSION_TOKEN>"
+os.environ["AWS_REGION"] = "<AWS_REGION>"
+```
+
+## Workshop Structure
 
 ```
 Strands_Agent/
-├── README.md                              # This file
-├── pyproject.toml                         # Python dependencies
-├── data/                                  # Synthetic FSI datasets
+├── README.md
+├── pyproject.toml
+├── data/
 │   ├── transactions.csv                   # 25 transactions with fraud patterns
 │   └── portfolio.csv                      # Client portfolios (Vanguard, Block)
-├── 00-strands-agents-fsi/                 # Lab 00: Strands Basics
+├── 00-strands-agents-fsi/
 │   └── 00-strands-agents-fsi.ipynb
-├── 01-agentcore-code-interpreter-fsi/     # Lab 01: Code Interpreter
+├── 01-agentcore-code-interpreter-fsi/
 │   └── 01-agentcore-code-interpreter-fsi.ipynb
-├── 02-agentcore-browser-fsi/             # Lab 02: Browser Automation
+├── 02-agentcore-browser-fsi/
 │   └── 02-agentcore-browser-fsi.ipynb
-├── 04-agentcore-runtime-mcp-fsi/         # Lab 04: Runtime MCP Deploy
+├── 04-agentcore-runtime-mcp-fsi/
 │   ├── 04-agentcore-runtime-mcp-fsi.ipynb
 │   └── mcp_server.py
-├── 05-agentcore-runtime-observability-fsi/ # Lab 05: Observability
-│   └── 05-agentcore-runtime-observability-fsi.ipynb
-└── 06-agentcore-memory-fsi/              # Lab 06: Memory
+├── 05-agentcore-runtime-observability-fsi/
+│   ├── 05-agentcore-runtime-observability-fsi.ipynb
+│   └── strands_agent.py
+└── 06-agentcore-memory-fsi/
     └── 06-agentcore-memory-fsi.ipynb
 ```
 
-## 🔑 Key Concepts
+## FSI Use Cases
 
-### Why AI Agents for FSI?
-- **Compliance automation** — Agents provide audit trails of every action
-- **Operational efficiency** — Automate repetitive analysis (cost reviews, risk reports)
-- **Client experience** — Persistent memory enables personalized advisory
-- **Regulatory monitoring** — Proactive alerts on policy changes
+| Customer Type | Use Cases Demonstrated |
+|---------------|----------------------|
+| **BNPL / Payments** (Afterpay) | Fraud detection, transaction validation, regulatory monitoring (ASIC) |
+| **Fintech Platform** (Block) | Multi-currency operations, cost optimization, platform monitoring |
+| **Asset Management** (Vanguard) | Portfolio risk analysis, ESG compliance, client advisory with memory |
 
-### AgentCore Features Used
-| Feature | What It Does | FSI Value |
-|---------|-------------|-----------|
-| Code Interpreter | Executes Python in sandbox | Safe financial calculations |
-| Browser | Controls web browser | Monitor regulators, extract market data |
-| Runtime | Deploys tools as managed services | Scalable, always-on tools |
-| Observability | Traces every agent action | Compliance audit trail |
-| Memory | Persists context across sessions | Client relationship continuity |
-
-## 👥 Target Audience
-
-- TAMs supporting FSI customers
-- Solutions Architects in financial services
-- Anyone wanting to understand AgentCore through practical FSI examples
-
-## 📚 References
+## References
 
 - [Strands Agents Documentation](https://strandsagents.com/)
 - [Bedrock AgentCore Documentation](https://docs.aws.amazon.com/bedrock-agentcore/)
 - [Original Workshop](https://github.com/aws-samples/sample-bedrock-agentcore-with-strands-and-nova)
+- [AgentCore Starter Toolkit](https://github.com/aws/bedrock-agentcore-starter-toolkit)
