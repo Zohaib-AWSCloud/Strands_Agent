@@ -8,12 +8,12 @@ The workshop consists of 6 progressive labs that build upon each other:
 
 | Lab | Title | Description | Key Learning Points | Directory |
 |-----|-------|-------------|--------------------:|-----------|
-| **Lab 0** | Getting Started with Strands Agents | Introduction to Strands Agents with FSI tools (loan calculator, stock lookup, FX rates) | • Learn Strands Agents fundamentals<br>• Create your first AI agent<br>• Build custom financial tools<br>• Understand the agent loop and conversation memory | [00-strands-agents-fsi/](./00-strands-agents-fsi/) |
-| **Lab 1** | Code Interpreter Integration | Integrate Strands Agents with AgentCore Code Interpreter for dynamic financial analysis | • Fraud detection on transaction data<br>• Portfolio risk analysis (sector concentration, P&L)<br>• Custom Code Interpreter with network access<br>• Live market data via yfinance | [01-agentcore-code-interpreter-fsi/](./01-agentcore-code-interpreter-fsi/) |
-| **Lab 2** | Browser Automation | Use AgentCore Browser to navigate financial websites and extract regulatory data | • Create custom browser with public network<br>• Navigate RBA website with Playwright<br>• Extract monetary policy information<br>• Browser fetch + Agent summarize pattern | [02-agentcore-browser-fsi/](./02-agentcore-browser-fsi/) |
-| **Lab 4** | MCP Server Deployment | Deploy transaction validation tools as a managed MCP server with authentication | • Build FSI MCP server (validate, sanctions, risk profile)<br>• Set up Cognito authentication<br>• Deploy to AgentCore Runtime<br>• Connect Strands Agent to deployed server | [04-agentcore-runtime-mcp-fsi/](./04-agentcore-runtime-mcp-fsi/) |
-| **Lab 5** | Agent Runtime with Observability | Deploy Strands Agents to AgentCore Runtime with comprehensive tracing for compliance | • Deploy agent with tools to AgentCore Runtime<br>• Invoke via boto3 with IAM auth<br>• View traces in CloudWatch (audit trail)<br>• GenAI Observability for FSI compliance | [05-agentcore-runtime-observability-fsi/](./05-agentcore-runtime-observability-fsi/) |
-| **Lab 6** | Memory Integration | Integrate persistent memory for client context across sessions | • Three memory strategies (summary, preference, semantic)<br>• Store rich FSI client conversations<br>• Memory-enabled agent for personalized responses<br>• Session handover demo | [06-agentcore-memory-fsi/](./06-agentcore-memory-fsi/) |
+| **Lab 0** | Getting Started with Strands Agents | Introduction to Strands Agents with FSI tools (loan calculator, stock lookup, FX rates) | • Learn Strands Agents fundamentals<br>• Create your first AI agent<br>• Build custom financial tools<br>• Understand the agent loop and conversation memory | [00-strands-agents/](./00-strands-agents/) |
+| **Lab 1** | Code Interpreter Integration | Integrate Strands Agents with AgentCore Code Interpreter for dynamic financial analysis | • Fraud detection on transaction data<br>• Portfolio risk analysis (sector concentration, P&L)<br>• Custom Code Interpreter with network access<br>• Live market data via yfinance | [01-agentcore-code-interpreter/](./01-agentcore-code-interpreter/) |
+| **Lab 2** | Browser Automation | Use AgentCore Browser to navigate financial websites and extract regulatory data | • Create custom browser with public network<br>• Navigate RBA website with Playwright<br>• Extract monetary policy information<br>• Browser fetch + Agent summarize pattern | [02-agentcore-browser/](./02-agentcore-browser/) |
+| **Lab 4** | MCP Server Deployment | Deploy transaction validation tools as a managed MCP server with authentication | • Build FSI MCP server (validate, sanctions, risk profile)<br>• Set up Cognito authentication<br>• Deploy to AgentCore Runtime<br>• Connect Strands Agent to deployed server | [04-agentcore-runtime-mcp/](./04-agentcore-runtime-mcp/) |
+| **Lab 5** | Agent Runtime with Observability | Deploy Strands Agents to AgentCore Runtime with comprehensive tracing for compliance | • Deploy agent with tools to AgentCore Runtime<br>• Invoke via boto3 with IAM auth<br>• View traces in CloudWatch (audit trail)<br>• GenAI Observability for FSI compliance | [05-agentcore-runtime-observability/](./05-agentcore-runtime-observability/) |
+| **Lab 6** | Memory Integration | Integrate persistent memory for client context across sessions | • Three memory strategies (summary, preference, semantic)<br>• Store rich FSI client conversations<br>• Memory-enabled agent for personalized responses<br>• Session handover demo | [06-agentcore-memory/](./06-agentcore-memory/) |
 
 ## Prerequisites
 
@@ -61,20 +61,20 @@ Strands_Agent/
 ├── data/
 │   ├── transactions.csv                   # 25 transactions with fraud patterns
 │   └── portfolio.csv                      # Client portfolios (Vanguard, Block)
-├── 00-strands-agents-fsi/
-│   └── 00-strands-agents-fsi.ipynb
-├── 01-agentcore-code-interpreter-fsi/
-│   └── 01-agentcore-code-interpreter-fsi.ipynb
-├── 02-agentcore-browser-fsi/
-│   └── 02-agentcore-browser-fsi.ipynb
-├── 04-agentcore-runtime-mcp-fsi/
-│   ├── 04-agentcore-runtime-mcp-fsi.ipynb
+├── 00-strands-agents/
+│   └── 00-strands-agents.ipynb
+├── 01-agentcore-code-interpreter/
+│   └── 01-agentcore-code-interpreter.ipynb
+├── 02-agentcore-browser/
+│   └── 02-agentcore-browser.ipynb
+├── 04-agentcore-runtime-mcp/
+│   ├── 04-agentcore-runtime-mcp.ipynb
 │   └── mcp_server.py
-├── 05-agentcore-runtime-observability-fsi/
-│   ├── 05-agentcore-runtime-observability-fsi.ipynb
+├── 05-agentcore-runtime-observability/
+│   ├── 05-agentcore-runtime-observability.ipynb
 │   └── strands_agent.py
-└── 06-agentcore-memory-fsi/
-    └── 06-agentcore-memory-fsi.ipynb
+└── 06-agentcore-memory/
+    └── 06-agentcore-memory.ipynb
 ```
 
 ## FSI Use Cases
