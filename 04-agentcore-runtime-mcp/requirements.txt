@@ -1,2 +1,3 @@
+ddgs
 mcp
 bedrock-agentcore
