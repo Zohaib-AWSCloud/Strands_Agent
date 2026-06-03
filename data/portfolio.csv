@@ -1,16 +1,16 @@
 client_id,client_name,asset_class,ticker,units,purchase_price,current_price,currency,weight_pct,sector
-CLI-001,Vanguard Super Fund,Equity,CBA.AX,15000,95.20,112.45,AUD,18.5,Financials
-CLI-001,Vanguard Super Fund,Equity,BHP.AX,12000,42.80,45.60,AUD,12.2,Materials
-CLI-001,Vanguard Super Fund,Equity,CSL.AX,3000,280.00,295.50,AUD,9.8,Healthcare
-CLI-001,Vanguard Super Fund,Equity,WBC.AX,20000,22.50,25.80,AUD,8.6,Financials
-CLI-001,Vanguard Super Fund,Equity,NAB.AX,18000,28.90,32.10,AUD,7.9,Financials
-CLI-001,Vanguard Super Fund,Fixed Income,GOVT.AX,50000,100.00,98.50,AUD,15.0,Government Bonds
-CLI-001,Vanguard Super Fund,Fixed Income,IAF.AX,30000,100.00,101.20,AUD,10.5,Corporate Bonds
-CLI-001,Vanguard Super Fund,International,VGS.AX,8000,85.00,98.20,AUD,10.8,Global Equity
-CLI-001,Vanguard Super Fund,Cash,CASH,500000,1.00,1.00,AUD,6.7,Cash
-CLI-002,Block Treasury,Equity,AAPL,5000,175.00,198.50,USD,22.0,Technology
-CLI-002,Block Treasury,Equity,MSFT,3000,380.00,425.00,USD,18.5,Technology
-CLI-002,Block Treasury,Equity,AMZN,2000,178.00,195.00,USD,12.0,Technology
-CLI-002,Block Treasury,Fixed Income,US10Y,100000,99.50,97.80,USD,28.0,Government Bonds
-CLI-002,Block Treasury,Crypto,BTC,50,62000.00,68500.00,USD,12.5,Digital Assets
-CLI-002,Block Treasury,Cash,CASH,2000000,1.00,1.00,USD,7.0,Cash
+CLI-001,Acme Super Fund,Equity,CBA.AX,15000,95.20,112.45,AUD,18.5,Financials
+CLI-001,Acme Super Fund,Equity,BHP.AX,12000,42.80,45.60,AUD,12.2,Materials
+CLI-001,Acme Super Fund,Equity,CSL.AX,3000,280.00,295.50,AUD,9.8,Healthcare
+CLI-001,Acme Super Fund,Equity,WBC.AX,20000,22.50,25.80,AUD,8.6,Financials
+CLI-001,Acme Super Fund,Equity,NAB.AX,18000,28.90,32.10,AUD,7.9,Financials
+CLI-001,Acme Super Fund,Fixed Income,GOVT.AX,50000,100.00,98.50,AUD,15.0,Government Bonds
+CLI-001,Acme Super Fund,Fixed Income,IAF.AX,30000,100.00,101.20,AUD,10.5,Corporate Bonds
+CLI-001,Acme Super Fund,International,VGS.AX,8000,85.00,98.20,AUD,10.8,Global Equity
+CLI-001,Acme Super Fund,Cash,CASH,500000,1.00,1.00,AUD,6.7,Cash
+CLI-002,XYZ Treasury,Equity,AAPL,5000,175.00,198.50,USD,22.0,Technology
+CLI-002,XYZ Treasury,Equity,MSFT,3000,380.00,425.00,USD,18.5,Technology
+CLI-002,XYZ Treasury,Equity,AMZN,2000,178.00,195.00,USD,12.0,Technology
+CLI-002,XYZ Treasury,Fixed Income,US10Y,100000,99.50,97.80,USD,28.0,Government Bonds
+CLI-002,XYZ Treasury,Crypto,BTC,50,62000.00,68500.00,USD,12.5,Digital Assets
+CLI-002,XYZ Treasury,Cash,CASH,2000000,1.00,1.00,USD,7.0,Cash

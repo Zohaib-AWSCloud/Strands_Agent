@@ -60,7 +60,7 @@ Strands_Agent/
 ├── pyproject.toml
 ├── data/
 │   ├── transactions.csv                   # 25 transactions with fraud patterns
-│   └── portfolio.csv                      # Client portfolios (Vanguard, Block)
+│   └── portfolio.csv                      # Client portfolios (Acme Super, XYZ)
 ├── 00-strands-agents/
 │   └── 00-strands-agents.ipynb
 ├── 01-agentcore-code-interpreter/
@@ -81,9 +81,9 @@ Strands_Agent/
 
 | Customer Type | Use Cases Demonstrated |
 |---------------|----------------------|
-| **BNPL / Payments** (Afterpay) | Fraud detection, transaction validation, regulatory monitoring (ASIC) |
-| **Fintech Platform** (Block) | Multi-currency operations, cost optimization, platform monitoring |
-| **Asset Management** (Vanguard) | Portfolio risk analysis, ESG compliance, client advisory with memory |
+| **BNPL / Payments** (Z-Pay) | Fraud detection, transaction validation, regulatory monitoring (ASIC) |
+| **Fintech Platform** (XYZ) | Multi-currency operations, cost optimization, platform monitoring |
+| **Asset Management** (Acme Super) | Portfolio risk analysis, ESG compliance, client advisory with memory |
 
 ## References
 
