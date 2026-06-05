@@ -4,7 +4,7 @@ agents:
     name: fsi_observability_agent
     language: python
     node_version: null
-    entrypoint: /Users/zohaibso/AI Workshops/FSI-AgentCore-Workshop/05-agentcore-runtime-observability-fsi/strands_agent.py
+    entrypoint: /Users/zohaibso/AI Workshops/FSI-AgentCore-Workshop/05-agentcore-runtime-observability/strands_agent.py
     deployment_type: container
     runtime_type: null
     platform: linux/arm64
