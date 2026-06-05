@@ -18,6 +18,7 @@ dependencies = [
     "ddgs>=6.0.0",
     "bedrock-agentcore>=1.0.0",
     "bedrock-agentcore-starter-toolkit>=0.3.9",
+    "yfinance>=1.4.1",
 ]
 
 [dependency-groups]
