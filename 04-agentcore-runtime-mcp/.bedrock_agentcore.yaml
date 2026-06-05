@@ -57,8 +57,8 @@ agents:
     authorizer_configuration:
       customJWTAuthorizer:
         allowedClients:
-        - bphhrihqhve47c0bhpvff279q
-        discoveryUrl: https://cognito-idp.ap-southeast-2.amazonaws.com/ap-southeast-2_sM91KfUiL/.well-known/openid-configuration
+        - 6q3k2li9jvitbdoqs63itd574m
+        discoveryUrl: https://cognito-idp.ap-southeast-2.amazonaws.com/ap-southeast-2_iIayRUeBr/.well-known/openid-configuration
     request_header_configuration: null
     oauth_configuration: null
     api_key_env_var_name: null
